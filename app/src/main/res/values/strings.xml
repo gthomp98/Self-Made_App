@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Self-Made App</string>
+    <string name="login_btn">login_btn</string>
+    <string name="login_button">Login</string>
 </resources>
