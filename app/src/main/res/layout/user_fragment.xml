@@ -2,40 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#161224"
     android:orientation="vertical"
     android:weightSum="7"
-    tools:context=".MainActivity"
-    tools:ignore="ExtraText">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3">
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-                <!--                <ImageView-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:src="@drawable/ui_fire_background"/>-->
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right|center">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_login_gradient_rect"/>
-            </LinearLayout>
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src ="@drawable/_logo1" />
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,15 +36,6 @@
             android:layout_height="0dp"
             android:gravity="bottom"
             android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:fontFamily="@font/karla_bold"
-                android:text="Self-Made"
-                android:textColor="#ffffff"
-                android:textSize="38sp" />
 
         </LinearLayout>
         <LinearLayout
@@ -108,12 +86,12 @@
             android:layout_height="wrap_content"
             android:background="@drawable/ic_login_button"
             android:fontFamily="@font/karla_bold"
-            android:text="@string/login_button"
+            android:text="Login"
             android:textAllCaps="false"
             android:textColor="#ffffff"
             android:textSize="23sp"
-            android:id="@+id/login_btn"
-            />
+            android:id="@+id/login_btn"/>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -130,8 +108,7 @@
             android:fontFamily="@font/karla"
             android:id="@+id/forgot_pass"/>
 
+
+
     </LinearLayout>
-
-
-
 </LinearLayout>

@@ -2,4 +2,31 @@
     <string name="app_name">Self-Made App</string>
     <string name="login_btn">login_btn</string>
     <string name="login_button">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="JobSeekerName">Job Seeker Name</string>
+    <string name="DateOfBirth">dd/mm/yyyy</string>
+    <string name="aboutJobSeeker">About</string>
+    <string name="JobSeekerEmail">Email</string>
+    <string name="JobSeekerPassword" />
+    <string name="password">Password</string>
+    <string name="account">Account</string>
+    <string name="jobs">Jobs</string>
+    <string name="settings">Settings</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="view">view</string>
+    <string name="Options">Options</string> />
 </resources>

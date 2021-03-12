@@ -1,0 +1,17 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<PreferenceCategory app:title="@string/view"
+    app:icon="@drawable/ic_view_light">
+
+    <SwitchPreference
+        app:key="Light and Dark"
+        app:title="Switch view mode" />
+
+
+
+
+</PreferenceCategory>
+
+
+
+</PreferenceScreen>

@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "title": "A new test random test job.",
+  "date_uploaded": "2020-12-12",
+  "valid_until": "2021-01-24",
+  "salary": "20.00",
+  "description": "This is a great job",
+  "created_at": "2021-03-10T15:39:20.000000Z",
+  "updated_at": "2021-03-10T15:39:20.000000Z",
+  "employer_id": 2,
+  "job_category_id": 1
+}
