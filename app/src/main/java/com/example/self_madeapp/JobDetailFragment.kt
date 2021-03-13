@@ -8,9 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
+import com.example.self_madeapp.data.Job
 import com.example.self_madeapp.databinding.JobDetailFragmentBinding
 
 class JobDetailFragment : Fragment() {
+
+    val jobEntry1 = Job(1, "Ux Job", "", 20.000, "This is a great job")
+
 
 
     private lateinit var viewModel: JobDetailViewModel
@@ -22,7 +26,10 @@ class JobDetailFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         binding = JobDetailFragmentBinding.inflate(inflater, container, false)
-        binding.jobsTitle.setText("Here")
+        binding.jobsTitle.setText(jobEntry1.title)
+        binding.jobsSalary.setText(jobEntry1.salary.toString())
+        binding.jobsDescription.setText(jobEntry1.description)
+
 
         viewModel = ViewModelProvider(this).get(JobDetailViewModel::class.java)
 

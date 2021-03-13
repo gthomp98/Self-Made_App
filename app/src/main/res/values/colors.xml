@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="colourPallette"/>
-    <color name="colourPrimary">#6C63FF</color>
-    <color name="colourPrimaryDark">#6C63FF</color>
-    <color name="colourAccent">#03DAC5</color>
+    <color name="purple">#6C16F6</color>
+    <color name="magenta">#63038C</color>
+    <color name="pink">#DA039D</color>
 
-    <color name="mainText">#2D313D</color>
-    <color name="textAlt">#8D8F97</color>
+    <color name="grey">#2D313D</color>
+    <color name="light_grey">#8D8F97</color>
 
-    <color name="mainBackground">#ffffff</color>
+    <color name="backgroundColor">#ffffff</color>
 
 </resources>

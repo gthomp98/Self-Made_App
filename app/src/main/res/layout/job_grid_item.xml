@@ -30,32 +30,18 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="jobTitle" />
 
-    <TextView
-        android:id="@+id/jobId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="jobId" />
-
 
 
     <ImageView
         android:id="@+id/companyImage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="8dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="Company Picture"
-        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        android:src="@drawable/abstract_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintDimensionRatio="1:1"
-        tools:ignore="HardcodedText"/>
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </ImageView>
 
     <TextView
         android:id="@+id/salaryNum"

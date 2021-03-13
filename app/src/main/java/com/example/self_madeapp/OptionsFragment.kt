@@ -21,18 +21,19 @@ class OptionsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = OptionsFragmentBinding.inflate(inflater,container,false)
-
-
-      binding.nightButton.setOnClickListener{
-        turnOnLightMode()
-      }
+        binding = OptionsFragmentBinding.inflate(inflater, container, false)
 
         binding.lightButton.setOnClickListener{
+            turnOnLightMode()
+        }
+
+        binding.nightButton.setOnClickListener{
             turnOnDarkMode()
         }
 
-        return inflater.inflate(R.layout.options_fragment, container, false)
+        return binding.root
+
+
 
 
 

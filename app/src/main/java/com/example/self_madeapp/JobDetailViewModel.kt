@@ -7,16 +7,9 @@ import androidx.lifecycle.ViewModel
 import com.example.self_madeapp.data.DataRepository
 
 class JobDetailViewModel(app:  Application) : AndroidViewModel(app) {
-    // TODO: Implement the ViewModel
 
     private val dataRepo = DataRepository(app)
     val jobDetailResponse = dataRepo.singleJobsResponse
-
-    init {
-        dataRepo.singleJobsResponse
-    }
-
-    // getSingleJObFromRepo(id..)
 
 
 }

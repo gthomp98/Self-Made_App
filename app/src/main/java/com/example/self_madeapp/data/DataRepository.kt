@@ -3,7 +3,6 @@ package com.example.self_madeapp.data
 import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
-import android.provider.ContactsContract
 import android.util.Log
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.MutableLiveData
@@ -18,7 +17,7 @@ class DataRepository (val app: Application) {
 
 
     val userData = MutableLiveData <AuthUser>()
-    //val jobsData = MutableLiveData <List<Job>>()
+    val jobsData = MutableLiveData <List<Job>>()
     val jobsResponse = MutableLiveData<DataResponse>()
 
     val singleJobsResponse = MutableLiveData<JobResponse>()
@@ -30,7 +29,7 @@ class DataRepository (val app: Application) {
         CoroutineScope(Dispatchers.IO).launch{
             callWebService()
             getJobsFromWeb()
-            getJobByID()
+            getSingleJobFromWeb()
         }
     }
 
@@ -65,7 +64,7 @@ class DataRepository (val app: Application) {
     }
 
     @WorkerThread
-    suspend fun getJobByID() {
+    suspend fun getSingleJobFromWeb() {
         if(networkAvailable()) {
             val retrofit = Retrofit.Builder()
                     .baseUrl(WEB_SERVICE_URL)
@@ -73,11 +72,14 @@ class DataRepository (val app: Application) {
                     .build()
             val service = retrofit.create(DataService::class.java)
 
-            val singleJobReturned = service.getJobById()
-            singleJobsResponse.postValue(singleJobReturned)
+            val jobsReturned = service.getSingleJob()
+            //.body() ?: emptyList()
+            singleJobsResponse.postValue(jobsReturned)
             Log.i("Here", singleJobsResponse.toString())
         }
     }
+
+
 
     // getJobById(id...)
 

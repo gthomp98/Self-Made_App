@@ -36,11 +36,10 @@ RecyclerView.Adapter<JobListAdapter.ViewHolder>(){
         with(holder.binding) {
         titleText.text = job.title
         salaryNum.text = job.salary.toString()
-            jobId.text = job.id.toString()
-
-//            Glide.with(context)
-//                .load(job.imageUrl)
-//                .into(companyImage)
+        val imageUrl = "https://firebirdsql.org/file/about/firebird-logo-200.png"
+            Glide.with(context)
+                .load(imageUrl)
+                .into(companyImage)
             root.setOnClickListener{
                 itemListener.onJobItemClick(job.id)
             }

@@ -3,9 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".JobDetailFragment">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -15,42 +16,53 @@
         android:layout_height="match_parent"
         tools:text="title"
         android:layout_margin="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
-    
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-<!--        -->
-<!--    </ImageView>-->
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/jobsImage"
+            android:src="@drawable/abstract_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/jobsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </ImageView>
 
     <TextView
         android:id="@+id/jobsSalary"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:text="title"
+        tools:text="salary"
         android:layout_margin="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintTop_toBottomOf="@id/jobsImage"
+        />
 
     <TextView
         android:id="@+id/jobsDescription"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:text="title"
+        tools:text="Description"
         android:layout_margin="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintTop_toBottomOf="@id/jobsSalary"/>
 
     <TextView
         android:id="@+id/jobsEmployer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:text="title"
+        tools:text="Employer"
         android:layout_margin="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintTop_toBottomOf="@id/jobsDescription"/>
 
 
 
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.core.widget.NestedScrollView>

@@ -7,10 +7,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
+import com.example.self_madeapp.data.User
 import com.example.self_madeapp.databinding.ProfileFragmentBinding
 
 class ProfileFragment : Fragment() {
 
+
+    val userProfile = User("admin@selfMade.ie","secret")
 
     private lateinit var viewModel: ProfileViewModel
     private lateinit var binding: ProfileFragmentBinding
@@ -24,7 +28,18 @@ class ProfileFragment : Fragment() {
         binding = ProfileFragmentBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
 
-//        viewModel.
+        binding.userEmail.setText(userProfile.email)
+
+//        val profileImage = "https://qph.fs.quoracdn.net/main-thumb-177317201-200-gqtbcatdgewhmnpsunkgggmggeugzxav.jpeg"
+//
+//        Glide.with(view.context)
+//                .load(profileImage)
+//                .into()
+
+
+
+
+
         return binding.root
     }
 

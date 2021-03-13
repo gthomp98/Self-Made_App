@@ -15,6 +15,6 @@ interface DataService {
     suspend fun getJobsData() : DataResponse
 
     @GET("jobs/1")
-    suspend fun getJobById() : JobResponse
+    suspend fun getSingleJob() : JobResponse
 
 }

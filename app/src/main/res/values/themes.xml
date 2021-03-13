@@ -1,12 +1,17 @@
 <resources>
-    <color name="colourPrimary">#6C63FF</color>
-    <color name="colourPrimaryDark">#6C63FF</color>
-    <color name="colourAccent">#03DAC5</color>
+    <style name="Theme.SelfMadeApp2" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
 
-    <color name="mainText">#2D313D</color>
-    <color name="textAlt">#8D8F97</color>
+ <item name="colorPrimary">@color/purple</item>
+    <item name="colorPrimaryVariant">@color/magenta</item>
+    <item name="colorOnPrimary">@color/pink</item>
 
-    <color name="mainBackground">#ffffff</color>
+    <item name="colorSecondary">@color/grey</item>
+    <item name="colorSecondaryVariant">@color/light_grey</item>
+
+    <item name="backgroundColor">@color/backgroundColor</item>
+
+<!--        <item name="android:statusBarColor" tools:targetApi="1">?attr/colorPrimaryVariant</item>-->
+    </style>
 
 </resources>
 

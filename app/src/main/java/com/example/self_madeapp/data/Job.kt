@@ -10,7 +10,7 @@ data class Job (
     val imageFile: String,
     val salary: Double,
     val description: String,
-    val employer : Employer
+//    val employer : Employer
 )//{
 //    val imageUrl
 //    get() = "$IMAGE_BASE_URL/$imageFile.webp"
