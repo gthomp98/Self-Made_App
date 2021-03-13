@@ -42,4 +42,9 @@
         android:id="@+id/optionsFragment"
         android:name="com.example.self_madeapp.OptionsFragment"
         android:label="Options" />
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.self_madeapp.MapsFragment"
+        android:label="Maps" />
 </navigation>

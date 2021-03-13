@@ -28,5 +28,7 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="view">view</string>
-    <string name="Options">Options</string> />
+    <string name="Options">Options</string>
+    <string name="Map">Map</string>/>
+    />
 </resources>
