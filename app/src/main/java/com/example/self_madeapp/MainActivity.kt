@@ -2,16 +2,10 @@ package com.example.self_madeapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.bumptech.glide.Glide
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
+//this is the main activity which is the first activity loaded when the app launches, anything global is stored here like the bottom nav bar and the nav controller
 class MainActivity : AppCompatActivity() {
 
 
@@ -19,25 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //this creates the bottom nav view and nav controller
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.navigationView)
         val navController = findNavController(R.id.fragment)
 
-
-
         bottomNavigationView.setupWithNavController(navController)
-
-        fun turnOnDarkMode(): Boolean{
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            return true
-        }
-
-        fun turnOnLightMode(): Boolean{
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            return true
-        }
-
-
-
 
     }
 }

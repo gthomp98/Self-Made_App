@@ -1,22 +1,20 @@
 package com.example.self_madeapp
 
 import android.annotation.SuppressLint
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
 import com.example.self_madeapp.data.User
 import com.example.self_madeapp.databinding.ProfileFragmentBinding
 
 class ProfileFragment : Fragment() {
 
 
+    //This is the profile fragment, which dictates the profile view, below is the user profile that is always used to login
     val userProfile = User("admin@selfMade.ie","secret")
 
-    private lateinit var viewModel: ProfileViewModel
     private lateinit var binding: ProfileFragmentBinding
 
     @SuppressLint("FragmentLiveDataObserve")
@@ -25,28 +23,15 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        //this inflates and displays the profile fragment display
         binding = ProfileFragmentBinding.inflate(inflater, container, false)
-        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
 
+        //This displays the users email in the profile
         binding.userEmail.setText(userProfile.email)
-
-//        val profileImage = "https://qph.fs.quoracdn.net/main-thumb-177317201-200-gqtbcatdgewhmnpsunkgggmggeugzxav.jpeg"
-//
-//        Glide.with(view.context)
-//                .load(profileImage)
-//                .into()
-
-
-
-
 
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+
 
 }

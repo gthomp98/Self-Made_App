@@ -7,7 +7,7 @@ import com.example.self_madeapp.data.DataRepository
 
 class JobViewModel(app: Application) : AndroidViewModel(app) {
 
-
+    //referencing our data repository where we are getting the api's data
     private val dataRepo = DataRepository(app)
     val dataResponse = dataRepo.jobsResponse
 

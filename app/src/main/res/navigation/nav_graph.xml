@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/userFragment">
-
+<!--this is the nav graph, the second navigation component used, this contains the fragment navigation from job to job detail, aswel as details about the other fragments and their ids which is referred to when navigating to them-->
+<!--    the nav graph can also pass in actions, which are how we get from one fragment to another, or arguments which can transfer data across fragments such as the job id-->
     <fragment
         android:id="@+id/userFragment"
         android:name="com.example.self_madeapp.UserFragment"

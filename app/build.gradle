@@ -6,7 +6,7 @@ plugins {
 
 
 }
-
+//this is the gradle which is where all dependancies are implemented for external libraries and plugins
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -15,7 +15,6 @@ android {
 
     buildFeatures {
         dataBinding true
-        //dataBinding true
         viewBinding true
     }
 

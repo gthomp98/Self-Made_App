@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--this is the job detail view, which has an image view, a button, and a number of text fields all contained within a nested scroll view that has constraints-->
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -107,11 +108,11 @@
             android:id="@+id/detailCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="140dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detail2CardView"
-            app:layout_constraintBottom_toBottomOf="parent">
+            >
 
             <TextView
                 android:id="@+id/jobsDescription"
@@ -151,42 +152,40 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/detail3CardView"
-            android:layout_width="150dp"
+
+        <Button
+            android:id="@+id/contact_button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="150dp"
+            android:text="Contact"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="50dp"
+            app:layout_constraintTop_toBottomOf="@id/detailCardView"
+            tools:ignore="MissingConstraints">
+
+        </Button>
 
 
-            app:layout_constraintBottom_toTopOf="@+id/DescriptionHeader"
+<!--        <TextView-->
+<!--            android:id="@+id/companyPostalAddress"-->
 
-            app:layout_constraintEnd_toEndOf="parent">
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="#57786D6D"-->
+<!--            android:textAlignment="center"-->
 
-        </androidx.cardview.widget.CardView>
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
 
-        <TextView
-            android:id="@+id/companyPostalAddress"
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#57786D6D"
-            android:textAlignment="center"
-
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-
-            tools:layout_editor_absoluteX="166dp"
-            tools:layout_editor_absoluteY="304dp"
-            tools:text="Company postal address" />
+<!--            tools:layout_editor_absoluteX="166dp"-->
+<!--            tools:layout_editor_absoluteY="304dp"-->
+<!--            tools:text="Company postal address" />-->
 
 
-        <!--    <TextView-->
-        <!--        android:id="@+id/companyPostalAddress"-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="match_parent"-->
-        <!--        tools:text="Company Postal Address"-->
-        <!--        android:layout_margin="16dp"-->
-        <!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
-        <!--        app:layout_constraintTop_toBottomOf="@id/"/>-->
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

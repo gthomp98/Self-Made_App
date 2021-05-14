@@ -10,7 +10,7 @@
 
         <item name="colorSecondary">@color/backgroundColor</item>
 
-        <!--        <item name="android:statusBarColor" tools:targetApi="1">?attr/colorPrimaryVariant</item>-->
+        <!--     this is the night theme for the app-->
     </style>
 
 </resources>
