@@ -8,22 +8,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RatingBar
-import androidx.drawerlayout.widget.DrawerLayout
+
 
 import androidx.lifecycle.*
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
+
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.bumptech.glide.load.engine.executor.GlideExecutor.UncaughtThrowableStrategy.LOG
-import com.example.self_madeapp.data.Job
+
 
 
 import com.example.self_madeapp.databinding.JobFragmentBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class JobFragment : Fragment(),
@@ -38,7 +31,7 @@ JobListAdapter.JobItemListener {
 
 
 
-//    private lateinit var appBarConfiguration: AppBarConfiguration
+
 
     @SuppressLint("FragmentLiveDataObserve")
 
@@ -61,7 +54,7 @@ JobListAdapter.JobItemListener {
             viewModel.dataResponse.observe(viewLifecycleOwner, Observer{
                 adapter = JobListAdapter(requireContext(), it.data, this@JobFragment)
                 binding.jobsRecyclerView.adapter = adapter
-                //binding.jobsRecyclerView.layoutManager = LinearLayoutManager(activity)
+
 
             })
 
@@ -73,6 +66,7 @@ JobListAdapter.JobItemListener {
     }
 
     override fun onJobItemClick(jobId: Int) {
+//        viewModel.selectedJob =
         Log.i("Here", "onJobItemClick: received job id $jobId")
         val action = JobFragmentDirections.actionJobFragmentToJobDetailFragment(jobId)
         findNavController().navigate(action)

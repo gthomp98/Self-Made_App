@@ -8,16 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.example.self_madeapp.data.Job
 import com.example.self_madeapp.databinding.JobDetailFragmentBinding
 
 class JobDetailFragment : Fragment() {
 
-    val jobEntry1 = Job(1, "Ux Job", "", 20.000, "This is a great job")
+//    val jobEntry1 = Job(1, "Ux Job", "", 20.000, "This is a great job")
 
 
 
-    private lateinit var viewModel: JobDetailViewModel
+    private lateinit var viewModel: JobViewModel
     private val args: JobDetailFragmentArgs by navArgs()
     private lateinit var binding: JobDetailFragmentBinding
 
@@ -26,27 +27,23 @@ class JobDetailFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         binding = JobDetailFragmentBinding.inflate(inflater, container, false)
-        binding.jobsTitle.setText(jobEntry1.title)
-        binding.jobsSalary.setText(jobEntry1.salary.toString())
-        binding.jobsDescription.setText(jobEntry1.description)
 
 
-        viewModel = ViewModelProvider(this).get(JobDetailViewModel::class.java)
 
-        viewModel.jobDetailResponse.observe(viewLifecycleOwner, Observer {
+        viewModel = ViewModelProvider(this).get(JobViewModel::class.java)
 
-            binding.jobsTitle
-            binding.jobsSalary
-            binding.jobsDescription
-            binding.jobsEmployer
+        viewModel.dataResponse.observe(viewLifecycleOwner, Observer {
 
 
-//                binding.jobsTitle.setText(it.job)
-//                binding.jobsDescription.setText(it.job)
-//                binding.jobsSalary.setText(it.job)
-                //binding.jobsRecyclerView.layout Manager = LinearLayoutManager(activity)
+            binding.jobsTitle.setText(it.data[args.jobId-1].title)
+
+            binding.jobsDescription.setText(it.data[args.jobId-1].description)
+            binding.jobsSalary.setText(it.data[args.jobId-1].salary.toString()+"00")
+           // binding.companyPostalAddress.setText(it.data[args.jobId-1].employer.company_postal_address)
 
             })
+
+
 
 
 

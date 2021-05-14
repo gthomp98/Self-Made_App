@@ -12,4 +12,5 @@ class JobDetailViewModel(app:  Application) : AndroidViewModel(app) {
     val jobDetailResponse = dataRepo.singleJobsResponse
 
 
+
 }

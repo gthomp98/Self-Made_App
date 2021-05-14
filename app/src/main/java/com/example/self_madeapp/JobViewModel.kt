@@ -11,6 +11,7 @@ class JobViewModel(app: Application) : AndroidViewModel(app) {
     private val dataRepo = DataRepository(app)
     val dataResponse = dataRepo.jobsResponse
 
+
 }
 
 //    private val _loading = MutableLiveData<LoadingState>()

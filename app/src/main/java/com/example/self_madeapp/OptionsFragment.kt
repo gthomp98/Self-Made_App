@@ -12,7 +12,7 @@ import com.example.self_madeapp.databinding.OptionsFragmentBinding
 class OptionsFragment : Fragment() {
 
 
-    private lateinit var viewModel: OptionsViewModel
+
     private lateinit var binding: OptionsFragmentBinding
 
 
@@ -34,14 +34,6 @@ class OptionsFragment : Fragment() {
         return binding.root
 
 
-
-
-
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(OptionsViewModel::class.java)
 
     }
 

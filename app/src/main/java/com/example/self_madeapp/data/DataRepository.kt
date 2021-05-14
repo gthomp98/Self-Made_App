@@ -22,7 +22,7 @@ class DataRepository (val app: Application) {
 
     val singleJobsResponse = MutableLiveData<JobResponse>()
 
-    val userX = User("admin@selfMade.ie","secret")
+    val userX = User("admin@SelfMade.ie","secret")
 
     init {
         Log.i("Testing", userX.toString())
@@ -78,10 +78,6 @@ class DataRepository (val app: Application) {
             Log.i("Here", singleJobsResponse.toString())
         }
     }
-
-
-
-    // getJobById(id...)
 
     @Suppress("DEPRECATION")
     private fun networkAvailable(): Boolean {

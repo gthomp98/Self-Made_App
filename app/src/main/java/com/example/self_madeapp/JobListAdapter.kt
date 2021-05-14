@@ -11,8 +11,8 @@ import com.example.self_madeapp.data.Job
 import com.example.self_madeapp.databinding.JobGridItemBinding
 
 class JobListAdapter(val context: Context,
-                     val jobsList: List<Job>,
-                     private val itemListener: JobItemListener):
+                      val jobsList: List<Job>,
+                      val itemListener: JobItemListener):
 
 RecyclerView.Adapter<JobListAdapter.ViewHolder>(){
 
@@ -35,12 +35,12 @@ RecyclerView.Adapter<JobListAdapter.ViewHolder>(){
         val job = jobsList[position]
         with(holder.binding) {
         titleText.text = job.title
-        salaryNum.text = job.salary.toString()
         val imageUrl = "https://firebirdsql.org/file/about/firebird-logo-200.png"
+//            val imageUrl = "https://picsum.photos/200/200?random=1"
             Glide.with(context)
                 .load(imageUrl)
                 .into(companyImage)
-            root.setOnClickListener{
+            titleText.setOnClickListener{
                 itemListener.onJobItemClick(job.id)
             }
         }
@@ -49,6 +49,7 @@ RecyclerView.Adapter<JobListAdapter.ViewHolder>(){
 
     interface JobItemListener {
         fun onJobItemClick(jobId:Int)
+//        fun onJobItemClick(jobId:Int)
     }
 
 }
